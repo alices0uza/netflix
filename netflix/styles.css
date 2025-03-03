@@ -1,0 +1,233 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #141414;
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: black;
+}
+
+.logo {
+    color: red;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+.user-menu {
+    display: flex;
+    align-items: center;
+}
+
+.user-menu input {
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.hero {
+    position: relative;
+    height: 60vh; /* Reduzindo a altura */
+    background: url('https://m.media-amazon.com/images/S/pv-target-images/1d161922c5bd85e5d9122d2be29a13e9219f642b2d3cf4e5982a0e2663fa49fb.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Alinha o conteúdo à esquerda */
+    color: white;
+    padding: 0 5%; /* Adiciona um espaço da borda esquerda */
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2));
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 500px; /* Define um tamanho limite para o conteúdo */
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.hero button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin-right: 10px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hero button:first-child {
+    background: red;
+    color: white;
+}
+
+.hero button:last-child {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.hero button:hover {
+    opacity: 0.8;
+}
+
+button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.categories {
+    padding: 20px 40px;
+}
+
+.category h2 {
+    margin-bottom: 10px;
+}
+
+.movie-list {
+    display: flex;
+    overflow-x: auto;
+}
+
+.movie-list img {
+    width: 150px;
+    margin-right: 10px;
+    border-radius: 5px;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.movie-list img:hover {
+    transform: scale(1.1);
+}
+
+/* Estilo do pop-up */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.popup.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup-content {
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 400px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
+}
+
+.popup.show .popup-content {
+    transform: scale(1);
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+.footer {
+    background-color: #111;
+    color: #757575;
+    padding: 40px 5%;
+    text-align: center;
+}
+
+.footer-text {
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.footer-text a {
+    color: #757575;
+    text-decoration: none;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 20px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    color: #757575;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #fff;
+}
+
+.footer-copy {
+    font-size: 12px;
+    margin-top: 20px;
+    opacity: 0.7;
+}
