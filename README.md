@@ -1,1 +1,1 @@
-https://github.com/alices0uza/netflix/netflix/index.html
+ https://alices0uza.github.io/netflix/netflix/index.html
